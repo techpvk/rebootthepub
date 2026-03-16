@@ -40,8 +40,8 @@
         <img src="/assets/reboot-logo.png" alt="Reboot The Pub Logo" class="logo-img">
       </a>
       <nav>
-        <a href="#hero">Home</a>
-        <a href="#experience">Experience</a>
+        <a href="#story-hero">Home</a>
+        <a href="#story-atmosphere">Experience</a>
         <a href="#menu">Menu</a>
         <a href="#gallery">Gallery</a>
         <a href="#booking">Reserve</a>
@@ -50,77 +50,153 @@
     </header>
 
     <main>
-      <!-- ─── HERO: Photorealistic Layered Parallax ────────── -->
-      <section id="hero" class="hero-section">
-        <div class="hero-bg">
-          <img src="/assets/hero-bg.png" alt="" aria-hidden="true">
+
+      <!-- ╔══════════════════════════════════════════════════╗
+           ║  CHAPTER 1: THE ENTRANCE — Sticky Hero Story     ║
+           ║  Beer glass stays pinned, text beats scroll past  ║
+           ╚══════════════════════════════════════════════════╝ -->
+      <section id="story-hero" class="story-chapter">
+        <div class="story-sticky">
+          <!-- The pinned visual: beer glass + title -->
+          <div class="story-visual">
+            <div class="hero-bg">
+              <img src="/assets/hero-bg.png" alt="" aria-hidden="true">
+            </div>
+            <div class="hero-glass">
+              <img src="/assets/hero-beer.png" alt="Signature beer at Reboot The Pub">
+            </div>
+            <!-- Story text beats (controlled by scroll) -->
+            <div class="story-beat beat-1 active">
+              <h1>REBOOT<br><span class="highlight">THE PUB</span></h1>
+              <p class="hero-tagline">Eat · Drink · Dance</p>
+            </div>
+            <div class="story-beat beat-2">
+              <h2 class="beat-title">Bengaluru's Premier<br>Nightlife Destination</h2>
+              <p class="beat-desc">Where every night is an experience, not just an outing.</p>
+            </div>
+            <div class="story-beat beat-3">
+              <h2 class="beat-title">Step Inside.<br>Leave Reality Behind.</h2>
+              <p class="beat-desc">Neon lights. Pulsing beats. Unforgettable moments.</p>
+            </div>
+          </div>
+          <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+          </div>
         </div>
-        <div class="hero-glass">
-          <img src="/assets/hero-beer.png" alt="Signature beer at Reboot The Pub">
-        </div>
-        <div class="hero-content">
-          <h1>REBOOT<br><span class="highlight">THE PUB</span></h1>
-          <p class="hero-tagline">Eat · Drink · Dance</p>
-          <p class="hero-sub">Bengaluru's Premier Nightlife Destination</p>
-          <button class="btn-primary hero-cta" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">Explore The Vibe</button>
-        </div>
-        <div class="floating-tooltip tooltip-1">Signature Cocktails</div>
-        <div class="floating-tooltip tooltip-2">Live Music Nights</div>
-        <div class="floating-tooltip tooltip-3">VIP Experience</div>
-        <div class="scroll-indicator">
-          <span>Scroll to explore</span>
-          <div class="scroll-arrow"></div>
-        </div>
+        <!-- Invisible scroll spacers that drive the story beats -->
+        <div class="story-spacer" data-beat="1"></div>
+        <div class="story-spacer" data-beat="2"></div>
+        <div class="story-spacer" data-beat="3"></div>
       </section>
 
-      <!-- ─── EXPERIENCE ─────────────────────────────────── -->
-      <section id="experience" class="experience-section">
-        <h2>The Reboot Experience</h2>
-        <p class="section-subtitle">Where energy meets elegance</p>
-        <div class="exp-grid">
-          <div class="exp-card exp-card-large">
+      <!-- ╔══════════════════════════════════════════════════╗
+           ║  CHAPTER 2: THE ATMOSPHERE — Pinned Image + Text  ║
+           ║  TinyPod-style: image stays, text scrolls past    ║
+           ╚══════════════════════════════════════════════════╝ -->
+      <section id="story-atmosphere" class="story-chapter feature-chapter">
+        <div class="feature-sticky">
+          <div class="feature-image">
             <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714781/3b397cde88be707bb9b04e7148948346.jpg" alt="Reboot Pub Astronaut Mural" loading="lazy">
-            <div class="exp-card-overlay">
-              <h3>Art & Atmosphere</h3>
-              <p>Immerse yourself in our signature murals and neon-lit ambiance</p>
-            </div>
           </div>
-          <div class="exp-card">
-            <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714804/5baec68ecea8c1fcd4f06cb8539dcdd3.jpg" alt="Reboot Pub DJ Setup" loading="lazy">
-            <div class="exp-card-overlay">
-              <h3>Live Music & DJ</h3>
-              <p>Electrifying nights with top DJs</p>
-            </div>
+        </div>
+        <div class="feature-text-track">
+          <div class="feature-text-panel">
+            <span class="chapter-label">Chapter 01</span>
+            <h2>Art & Atmosphere</h2>
+            <p>Step through the doors and be greeted by our signature astronaut mural — a symbol of exploring new frontiers of nightlife. Every corner is designed to be your next Instagram moment.</p>
           </div>
-          <div class="exp-card">
-            <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714781/14b024b11b4fe19967031e60d5f1023b.jpg" alt="Reboot Pub Seating Area" loading="lazy">
-            <div class="exp-card-overlay">
-              <h3>Lounge & Seating</h3>
-              <p>Contemporary comfort meets industrial chic</p>
-            </div>
+          <div class="feature-text-panel">
+            <span class="chapter-label">The Vibe</span>
+            <h2>Neon-Lit Ambiance</h2>
+            <p>From the glow of our custom neon installations to the warmth of our industrial-chic interiors, every detail is curated to create an atmosphere that pulses with energy.</p>
           </div>
         </div>
       </section>
 
-      <!-- ─── MENU ───────────────────────────────────────── -->
+      <!-- ╔══════════════════════════════════════════════════╗
+           ║  CHAPTER 3: THE DRINKS — Pinned Image + Text      ║
+           ╚══════════════════════════════════════════════════╝ -->
+      <section id="story-drinks" class="story-chapter feature-chapter">
+        <div class="feature-sticky">
+          <div class="feature-image">
+            <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714804/5baec68ecea8c1fcd4f06cb8539dcdd3.jpg" alt="Cocktails at Reboot" loading="lazy">
+          </div>
+        </div>
+        <div class="feature-text-track">
+          <div class="feature-text-panel">
+            <span class="chapter-label">Chapter 02</span>
+            <h2>Crafted To Perfection</h2>
+            <p>Our mixologists don't just pour drinks — they craft experiences. Signature cocktails infused with local flavors, premium spirits from around the world, and craft beers on draft.</p>
+          </div>
+          <div class="feature-text-panel">
+            <span class="chapter-label">The Bar</span>
+            <h2>Premium Spirits & Craft Beers</h2>
+            <p>Over 50 premium labels. 12 beers on tap. One unforgettable bar. Whether you're a whiskey connoisseur or a cocktail explorer, we've got your poison.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ╔══════════════════════════════════════════════════╗
+           ║  CHAPTER 4: THE MUSIC — Pinned Image + Text       ║
+           ╚══════════════════════════════════════════════════╝ -->
+      <section id="story-music" class="story-chapter feature-chapter">
+        <div class="feature-sticky">
+          <div class="feature-image">
+            <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714781/14b024b11b4fe19967031e60d5f1023b.jpg" alt="DJ and Music at Reboot" loading="lazy">
+          </div>
+        </div>
+        <div class="feature-text-track">
+          <div class="feature-text-panel">
+            <span class="chapter-label">Chapter 03</span>
+            <h2>Feel The Beat</h2>
+            <p>From deep house to Bollywood bangers, our resident and guest DJs read the room like no other. The bass hits different at Reboot.</p>
+          </div>
+          <div class="feature-text-panel">
+            <span class="chapter-label">Live Nights</span>
+            <h2>Music That Moves You</h2>
+            <p>Live band nights. DJ throwdowns. Karaoke battles. Every week brings a new reason to come back.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ╔══════════════════════════════════════════════════╗
+           ║  INTERLUDE: Bold Statement                        ║
+           ╚══════════════════════════════════════════════════╝ -->
+      <section class="interlude-section">
+        <div class="interlude-content">
+          <h2 class="interlude-text">A Phone Call Away.<br>A World Apart.</h2>
+          <p class="interlude-sub">Club Reboot — an electrifying creation by Euthenia Hospitality, dedicated to revolutionizing the nightlife experience since December 2023.</p>
+        </div>
+      </section>
+
+      <!-- ╔══════════════════════════════════════════════════╗
+           ║  CHAPTER 5: MENU — Glass Cards                    ║
+           ╚══════════════════════════════════════════════════╝ -->
       <section id="menu" class="menu-section">
         <h2>Our Offerings</h2>
         <p class="section-subtitle">Curated for the perfect night out</p>
         <div class="menu-grid bento-grid">
           <div class="menu-item glass-card">
-            <div class="card-icon">🍸</div>
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2l1.5 9H15l1-9M6 11h12l-1 11H7L6 11z"/></svg>
+            </div>
             <h3>Drinks Menu</h3>
             <p>Signature Cocktails, Premium Spirits & Craft Beers</p>
             <span class="price">Explore →</span>
           </div>
           <div class="menu-item glass-card">
-            <div class="card-icon">🍽️</div>
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+            </div>
             <h3>Food Menu</h3>
             <p>Contemporary culinary delights for every palate</p>
             <span class="price">Explore →</span>
           </div>
           <div class="menu-item glass-card">
-            <div class="card-icon">⭐</div>
+            <div class="card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
             <h3>VIP Experience</h3>
             <p>Premium table service & bottle reservations</p>
             <span class="price">Explore →</span>
@@ -128,7 +204,9 @@
         </div>
       </section>
 
-      <!-- ─── GALLERY ────────────────────────────────────── -->
+      <!-- ╔══════════════════════════════════════════════════╗
+           ║  CHAPTER 6: GALLERY                               ║
+           ╚══════════════════════════════════════════════════╝ -->
       <section id="gallery" class="gallery-section">
         <h2>The Vibes</h2>
         <p class="section-subtitle">Moments from Reboot</p>
@@ -142,15 +220,9 @@
         </div>
       </section>
 
-      <!-- ─── ABOUT ──────────────────────────────────────── -->
-      <section id="about" class="about-section">
-        <h2>About Club Reboot</h2>
-        <div class="about-container">
-          <p class="about-text">Welcome to Club Reboot, an electrifying creation by Euthenia Hospitality Private Limited, dedicated to revolutionizing the nightlife experience. Established in December 2023, Reboot Club is not just a venue; it's a testament to innovation, celebration, and the art of entertainment. Our vision is to curate unparalleled experiences, blending cutting-edge technology, exceptional hospitality, and an atmosphere pulsating with energy.</p>
-        </div>
-      </section>
-
-      <!-- ─── BOOKING ────────────────────────────────────── -->
+      <!-- ╔══════════════════════════════════════════════════╗
+           ║  CHAPTER 7: BOOKING                               ║
+           ╚══════════════════════════════════════════════════╝ -->
       <section id="booking" class="booking-section">
         <h2>Make a Reservation</h2>
         <p class="section-subtitle">Reserve your spot for an unforgettable night</p>
