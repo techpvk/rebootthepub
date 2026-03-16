@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reboot The Pub | A unit of EUTHENIA HOSPITALITY</title>
+    <meta name="description" content="Reboot The Pub — Bengaluru's electrifying nightlife destination by Euthenia Hospitality. Best pub in Marathahalli. Eat. Drink. Dance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/reboot-logo.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "rebootthepub",
+      "legalName": "EUTHENIA HOSPITALITY",
+      "image": "https://rebootthepub.com/assets/images/logo/123rebootlogolrg.png",
+      "url": "https://rebootthepub.com",
+      "telephone": "+91-7386848489",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 90/2, Above Titan World Marathahalli Outer Ring Road",
+        "addressLocality": "Bengaluru",
+        "postalCode": "560037",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <!-- ─── FULL-PAGE WEBGL ATMOSPHERIC OVERLAY ──────────── -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- ─── HEADER ───────────────────────────────────────── -->
+    <header id="main-header">
+      <a href="#" class="logo-link">
+        <img src="/assets/reboot-logo.png" alt="Reboot The Pub Logo" class="logo-img">
+      </a>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Reserve</a>
+        <button class="btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book Now</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ─── HERO: Photorealistic Layered Parallax ────────── -->
+      <section id="hero" class="hero-section">
+        <div class="hero-bg">
+          <img src="/assets/hero-bg.png" alt="" aria-hidden="true">
+        </div>
+        <div class="hero-glass">
+          <img src="/assets/hero-beer.png" alt="Signature beer at Reboot The Pub">
+        </div>
+        <div class="hero-content">
+          <h1>REBOOT<br><span class="highlight">THE PUB</span></h1>
+          <p class="hero-tagline">Eat · Drink · Dance</p>
+          <p class="hero-sub">Bengaluru's Premier Nightlife Destination</p>
+          <button class="btn-primary hero-cta" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">Explore The Vibe</button>
+        </div>
+        <div class="floating-tooltip tooltip-1">Signature Cocktails</div>
+        <div class="floating-tooltip tooltip-2">Live Music Nights</div>
+        <div class="floating-tooltip tooltip-3">VIP Experience</div>
+        <div class="scroll-indicator">
+          <span>Scroll to explore</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- ─── EXPERIENCE ─────────────────────────────────── -->
+      <section id="experience" class="experience-section">
+        <h2>The Reboot Experience</h2>
+        <p class="section-subtitle">Where energy meets elegance</p>
+        <div class="exp-grid">
+          <div class="exp-card exp-card-large">
+            <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714781/3b397cde88be707bb9b04e7148948346.jpg" alt="Reboot Pub Astronaut Mural" loading="lazy">
+            <div class="exp-card-overlay">
+              <h3>Art & Atmosphere</h3>
+              <p>Immerse yourself in our signature murals and neon-lit ambiance</p>
+            </div>
+          </div>
+          <div class="exp-card">
+            <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714804/5baec68ecea8c1fcd4f06cb8539dcdd3.jpg" alt="Reboot Pub DJ Setup" loading="lazy">
+            <div class="exp-card-overlay">
+              <h3>Live Music & DJ</h3>
+              <p>Electrifying nights with top DJs</p>
+            </div>
+          </div>
+          <div class="exp-card">
+            <img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714781/14b024b11b4fe19967031e60d5f1023b.jpg" alt="Reboot Pub Seating Area" loading="lazy">
+            <div class="exp-card-overlay">
+              <h3>Lounge & Seating</h3>
+              <p>Contemporary comfort meets industrial chic</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── MENU ───────────────────────────────────────── -->
+      <section id="menu" class="menu-section">
+        <h2>Our Offerings</h2>
+        <p class="section-subtitle">Curated for the perfect night out</p>
+        <div class="menu-grid bento-grid">
+          <div class="menu-item glass-card">
+            <div class="card-icon">🍸</div>
+            <h3>Drinks Menu</h3>
+            <p>Signature Cocktails, Premium Spirits & Craft Beers</p>
+            <span class="price">Explore →</span>
+          </div>
+          <div class="menu-item glass-card">
+            <div class="card-icon">🍽️</div>
+            <h3>Food Menu</h3>
+            <p>Contemporary culinary delights for every palate</p>
+            <span class="price">Explore →</span>
+          </div>
+          <div class="menu-item glass-card">
+            <div class="card-icon">⭐</div>
+            <h3>VIP Experience</h3>
+            <p>Premium table service & bottle reservations</p>
+            <span class="price">Explore →</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── GALLERY ────────────────────────────────────── -->
+      <section id="gallery" class="gallery-section">
+        <h2>The Vibes</h2>
+        <p class="section-subtitle">Moments from Reboot</p>
+        <div class="gallery-masonry">
+          <div class="gallery-item"><img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714687/97a9cafe4ad0fac7603d9ad43945ffe8.jpg" alt="Pub Interior" loading="lazy"></div>
+          <div class="gallery-item"><img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714805/0abbaab421aacfa6524afb8ad7f9b269.jpg" alt="Music Wall" loading="lazy"></div>
+          <div class="gallery-item"><img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714688/251057b53d81ea0231f7e0d68bfa1f13.jpg" alt="Reboot Interior" loading="lazy"></div>
+          <div class="gallery-item"><img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714806/905745d180efee1dc2522c50a7dfd9f2.jpg" alt="Bar Setup" loading="lazy"></div>
+          <div class="gallery-item"><img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714780/11db9b4b61c63cfe7b18e8c167ef3644.jpg" alt="Reboot Scene" loading="lazy"></div>
+          <div class="gallery-item"><img src="https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1709714780/e9e79550433672a694efc89ff4867df6.jpg" alt="Ambiance" loading="lazy"></div>
+        </div>
+      </section>
+
+      <!-- ─── ABOUT ──────────────────────────────────────── -->
+      <section id="about" class="about-section">
+        <h2>About Club Reboot</h2>
+        <div class="about-container">
+          <p class="about-text">Welcome to Club Reboot, an electrifying creation by Euthenia Hospitality Private Limited, dedicated to revolutionizing the nightlife experience. Established in December 2023, Reboot Club is not just a venue; it's a testament to innovation, celebration, and the art of entertainment. Our vision is to curate unparalleled experiences, blending cutting-edge technology, exceptional hospitality, and an atmosphere pulsating with energy.</p>
+        </div>
+      </section>
+
+      <!-- ─── BOOKING ────────────────────────────────────── -->
+      <section id="booking" class="booking-section">
+        <h2>Make a Reservation</h2>
+        <p class="section-subtitle">Reserve your spot for an unforgettable night</p>
+        <form id="booking-form">
+          <input type="text" placeholder="Your Name" required aria-label="Name">
+          <input type="tel" placeholder="Phone Number" required aria-label="Phone">
+          <input type="email" placeholder="Email Address" aria-label="Email">
+          <select aria-label="Party Size">
+            <option value="" disabled selected>Party Size</option>
+            <option value="2">2 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="8">8+ Guests</option>
+          </select>
+          <div class="checkbox-group">
+            <input type="checkbox" id="whatsapp-optin">
+            <label for="whatsapp-optin">I agree to receive booking updates and offers from rebootthepub on WhatsApp</label>
+          </div>
+          <button type="submit" class="btn-primary">Confirm Booking</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- ─── FOOTER ───────────────────────────────────────── -->
+    <footer id="footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <img src="/assets/reboot-logo.png" alt="Reboot Logo" class="footer-logo">
+            <p class="footer-desc">Bengaluru's Premier Nightlife Destination. Where energy meets elegance.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Find Us</h4>
+            <p>No. 90/2, Above Titan World<br>Marathahalli Outer Ring Road<br>Bengaluru, Karnataka 560037</p>
+            <p style="margin-top:10px">+91 7386848489 / +91 7396848489</p>
+            <p style="margin-top:5px">info@rebootthepub.com</p>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="socials">
+              <a href="https://www.instagram.com/rebootthepub" target="_blank">Instagram</a>
+              <a href="https://www.facebook.com/rebootthepub" target="_blank">Facebook</a>
+              <a href="https://twitter.com/rebootthepub" target="_blank">Twitter</a>
+              <a href="https://www.youtube.com/@rebootthepub" target="_blank">YouTube</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="legal-entity">rebootthepub — A unit of EUTHENIA HOSPITALITY</p>
+          <div class="legal-links">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms-of-service.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/917386848489" target="_blank" class="floating-whatsapp" aria-label="WhatsApp Support">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.01 2.01C6.5 2.01 2 6.51 2 12.02C2 13.78 2.46 15.48 3.3 16.96L2 22L7.15 20.72C8.6 21.57 10.28 22.04 12.02 22.04C17.53 22.04 22.03 17.54 22.03 12.03C22.03 6.52 17.53 2.01 12.01 2.01ZM16.55 14.12C16.3 14 15.31 13.51 15.13 13.44C14.95 13.38 14.81 13.34 14.69 13.53C14.56 13.72 14.2 14.15 14.07 14.31C13.95 14.47 13.82 14.49 13.57 14.37C13.33 14.24 12.68 14.03 11.91 13.34C11.3 12.8 10.89 12.14 10.76 11.95C10.64 11.76 10.75 11.66 10.87 11.53C10.99 11.42 11.13 11.26 11.25 11.12C11.38 10.97 11.42 10.87 11.5 10.68C11.58 10.49 11.54 10.33 11.48 10.21C11.42 10.08 11.02 9.07 10.86 8.65C10.69 8.24 10.53 8.3 10.42 8.29C10.31 8.28 10.18 8.28 10.06 8.28C9.93 8.28 9.74 8.33 9.58 8.5C9.42 8.67 8.97 9.09 8.97 9.95C8.97 10.81 9.61 11.64 9.71 11.77C9.8 11.89 10.93 13.68 12.72 14.41C14.17 14.91 14.56 14.88 14.87 14.84C15.22 14.79 15.96 14.39 16.12 13.94C16.27 13.48 16.27 13.09 16.21 13C16.15 12.92 16.03 12.87 15.78 12.75Z"/>
+      </svg>
+    </a>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
