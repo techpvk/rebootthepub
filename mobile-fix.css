@@ -1,0 +1,334 @@
+/* ═══════════════════════════════════════════════════════════════
+   REBOOT THE PUB — Mobile Fix & UX Enhancement Layer
+   Add this AFTER your existing style.css
+   Tested breakpoints: 375px, 430px, 768px
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── 1. HAMBURGER MENU — replaces cramped nav on mobile ─────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 200;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.35s ease, opacity 0.35s ease, background 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile nav drawer */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(6, 4, 14, 0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    z-index: 150;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  nav.mobile-open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+  nav a {
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    padding: 18px 0;
+    color: rgba(255,255,255,0.7);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    width: 70%;
+    text-align: center;
+    display: block;
+    transition: color 0.25s;
+  }
+  nav a:last-of-type { border-bottom: none; }
+  nav a:hover, nav a:active { color: var(--neon-pink); }
+  nav .btn-primary {
+    margin-top: 28px;
+    font-size: 1rem;
+    padding: 16px 48px;
+    width: 70%;
+    text-align: center;
+    border-radius: 50px;
+  }
+
+  /* Keep header always visible above drawer */
+  #main-header { z-index: 160; }
+}
+
+/* ─── 2. HERO — fix text overflow & glass positioning ────────── */
+@media (max-width: 768px) {
+  /* Reduce scroll height so story doesn't feel infinite */
+  #story-hero { height: 280vh; }
+
+  .story-beat {
+    left: 0;
+    width: 100%;
+    padding: 0 6%;
+    top: auto;
+    bottom: 12vh;
+    transform: none;
+  }
+  .story-beat.active {
+    transform: none;
+  }
+
+  .story-beat h1 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+    letter-spacing: -1px;
+    line-height: 0.95;
+  }
+  .beat-title {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+    line-height: 1.1;
+  }
+  .beat-desc, .hero-tagline {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    letter-spacing: 2px;
+  }
+  .hero-tagline { font-size: clamp(1rem, 4vw, 1.4rem); }
+
+  /* Beer glass — move to top-right, smaller, out of text way */
+  .hero-glass {
+    width: 48%;
+    right: 2%;
+    top: 12%;
+    transform: none;
+  }
+
+  /* Scroll indicator — push it lower */
+  .scroll-indicator { bottom: 20px; }
+}
+
+@media (max-width: 430px) {
+  .hero-glass { width: 44%; top: 10%; }
+  .story-beat h1 { font-size: 2.6rem; }
+}
+
+/* ─── 3. FEATURE CHAPTERS — stack vertically on mobile ───────── */
+@media (max-width: 768px) {
+  .feature-chapter {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  /* Unpin the sticky image — just a regular block on mobile */
+  .feature-sticky {
+    position: relative;
+    width: 100%;
+    height: 56vw;
+    min-height: 220px;
+    max-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+  }
+
+  .feature-image {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+  .feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  /* Text track — no longer absolutely positioned */
+  .feature-text-track {
+    position: relative;
+    width: 100%;
+    top: auto;
+    right: auto;
+  }
+
+  .feature-text-panel {
+    height: auto;
+    min-height: 0;
+    padding: 40px 6% 48px;
+    opacity: 1 !important;         /* always visible on mobile */
+    transform: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .feature-text-panel:last-child { border-bottom: none; }
+
+  .feature-text-panel h2 {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+    margin-bottom: 14px;
+  }
+  .feature-text-panel p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    max-width: 100%;
+  }
+  .chapter-label { margin-bottom: 10px; }
+}
+
+/* ─── 4. INTERLUDE SECTION ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .interlude-section {
+    height: auto;
+    min-height: 60vh;
+    padding: 80px 6%;
+  }
+  .interlude-text {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+    line-height: 1.2;
+  }
+  .interlude-sub {
+    font-size: 0.9rem;
+    margin-top: 18px;
+    line-height: 1.7;
+  }
+}
+
+/* ─── 5. MENU / BENTO GRID ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .menu-section, .gallery-section, .booking-section {
+    padding: 70px 5%;
+  }
+  .menu-section h2, .gallery-section h2, .booking-section h2 {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .glass-card {
+    padding: 28px 24px;
+  }
+  .glass-card h3 { font-size: 1.4rem; }
+
+  /* Disable 3D tilt on mobile (causes glitches) */
+  .glass-card { transform: none !important; }
+}
+
+/* ─── 6. GALLERY — 1 column on very small, 2 on medium ────────── */
+@media (max-width: 480px) {
+  .gallery-masonry { columns: 1; column-gap: 0; }
+  .gallery-item { margin-bottom: 12px; border-radius: 10px; }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .gallery-masonry { columns: 2; column-gap: 10px; }
+}
+
+/* ─── 7. BOOKING FORM ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  #booking-form {
+    max-width: 100%;
+    gap: 14px;
+  }
+  #booking-form input,
+  #booking-form select {
+    padding: 14px 16px;
+    font-size: 16px; /* prevents iOS auto-zoom on focus */
+    border-radius: 10px;
+  }
+  #booking-form .btn-primary {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    border-radius: 12px;
+    letter-spacing: 2px;
+  }
+  .checkbox-group {
+    font-size: 0.82rem;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--neon-pink);
+  }
+}
+
+/* ─── 8. FOOTER ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  footer { padding: 60px 6% 40px; }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+    align-items: flex-start;
+  }
+  .legal-links { flex-wrap: wrap; gap: 14px; }
+}
+
+/* ─── 9. FLOATING WHATSAPP — avoid covering bottom nav area ───── */
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    bottom: 20px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ─── 10. SECTION HEADINGS — fluid type globally ─────────────── */
+@media (max-width: 768px) {
+  .section-subtitle {
+    font-size: 0.88rem;
+    letter-spacing: 2px;
+    padding: 0 4%;
+  }
+}
+
+/* ─── 11. GENERAL TOUCH TARGETS & SCROLL FIX ─────────────────── */
+@media (max-width: 768px) {
+  /* Prevent horizontal overflow */
+  body { overflow-x: hidden; }
+
+  /* Larger tap targets */
+  a, button { min-height: 44px; }
+
+  /* Smooth scroll on iOS */
+  html { -webkit-overflow-scrolling: touch; }
+
+  /* Remove hover scale on glass cards (no hover on touch) */
+  .gallery-item:hover img { transform: none; }
+
+  /* Prevent WebGL canvas from blocking touch events */
+  #webgl-canvas { pointer-events: none; touch-action: none; }
+}
+
+/* ─── 12. REDUCED MOTION RESPECT ─────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-glass img { animation: none; }
+  .story-beat, .feature-text-panel { transition: none; }
+  .scroll-arrow { animation: none; }
+}
